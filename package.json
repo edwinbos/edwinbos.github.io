@@ -4,6 +4,7 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/source.css -o ./dist/styles.css",
-    "watch": "npx tailwindcss -i ./src/source.css -o ./dist/styles.css --watch"
+    "watch": "npx tailwindcss -i ./src/source.css -o ./dist/styles.css --watch",
+    "serve": "npm run http-server"
   }
 }
