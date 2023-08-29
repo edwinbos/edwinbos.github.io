@@ -550,6 +550,10 @@ video {
   right: 1rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -576,6 +580,10 @@ video {
 
 .place-content-center {
   place-content: center;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .bg-blue {
@@ -612,17 +620,40 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-#rocket {
-  animation: circle auto linear alternate;
+.animate-rotate {
+  animation: rotate auto linear alternate;
   animation-timeline: scroll(root);
 }
 
-@keyframes circle {
+.animate-fly {
+  animation: fly auto linear alternate;
+  animation-timeline: scroll(root);
+}
+
+.animate-to-left {
+  animation: to-left auto;
+  animation-timeline: scroll(root);
+}
+
+@keyframes fly {
   0% {
-    transform: rotate(0deg) translate(-100px) rotate(0deg);
+    transform: rotate(0deg) translate(-150px) rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg)  translate(-100px) rotate(-360deg);
+    transform: rotate(720deg)  translate(-150px) rotate(-720deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes to-left {
+  100% {
+    transform: translate(calc(-100vw + 50%));
+    position: sticky;
   }
 }

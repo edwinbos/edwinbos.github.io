@@ -2,16 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-#rocket {
-    animation: circle auto linear alternate;
-    animation-timeline: scroll(root);
+.animate-rotate {
+  animation: rotate auto linear alternate;
+  animation-timeline: scroll(root);
 }
 
-@keyframes circle {
+.animate-fly {
+  animation: fly auto linear alternate;
+  animation-timeline: scroll(root);
+}
+
+.animate-to-left {
+  animation: to-left auto;
+  animation-timeline: scroll(root);
+}
+
+@keyframes fly {
     0% {
-        transform: rotate(0deg) translate(-100px) rotate(0deg);
+        transform: rotate(0deg) translate(-150px) rotate(0deg);
       }
       100% {
-        transform: rotate(360deg)  translate(-100px) rotate(-360deg);
+        transform: rotate(720deg)  translate(-150px) rotate(-720deg);
       }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes to-left {
+  100% {
+    transform: translate(calc(-100vw + 50%));
+    position: sticky;
+  }
 }
