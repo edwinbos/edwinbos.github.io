@@ -534,8 +534,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
+.fixed {
+  position: fixed;
 }
 
 .relative {
@@ -546,8 +546,8 @@ video {
   bottom: 1rem;
 }
 
-.right-4 {
-  right: 1rem;
+.left-4 {
+  left: 1rem;
 }
 
 .z-10 {
@@ -620,22 +620,12 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.animate-rotate {
-  animation: rotate auto linear alternate;
+.animate-circle {
+  animation: circle auto linear alternate;
   animation-timeline: scroll(root);
 }
 
-.animate-fly {
-  animation: fly auto linear alternate;
-  animation-timeline: scroll(root);
-}
-
-.animate-to-left {
-  animation: to-left auto;
-  animation-timeline: scroll(root);
-}
-
-@keyframes fly {
+@keyframes circle {
   0% {
     transform: rotate(0deg) translate(-150px) rotate(0deg);
   }
@@ -645,15 +635,20 @@ video {
   }
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(720deg);
-  }
+#rocket {
+  position: fixed;
+  offset-path: path('M.5 122.7s24.7-275 276.9 0c327.1 356.7 266.1-330.3 548-33.3 256.9 270.7 271.1 0 271.1 0');
+  animation: move auto linear;
+  animation-timeline: scroll(root);
+  transform: rotate(50deg);
 }
 
-@keyframes to-left {
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
   100% {
-    transform: translate(calc(-100vw + 50%));
-    position: sticky;
+    offset-distance: 100%;
   }
 }
