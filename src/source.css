@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .animate-circle {
   animation: circle auto linear alternate;
   animation-timeline: scroll(root);
