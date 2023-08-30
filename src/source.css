@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .animate-circle {
