@@ -558,6 +558,10 @@ video {
   z-index: 50;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .grid {
   display: grid;
 }
@@ -610,9 +614,9 @@ video {
   font-weight: 900;
 }
 
-.text-white {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 body {
@@ -624,6 +628,11 @@ body {
   animation-timeline: scroll(root);
 }
 
+.animate-to-top {
+  animation: toTop auto linear alternate;
+  animation-timeline: scroll(root);
+}
+
 @keyframes circle {
   0% {
     transform: rotate(0deg) translate(-150px) rotate(0deg);
@@ -631,6 +640,17 @@ body {
 
   100% {
     transform: rotate(720deg)  translate(-150px) rotate(-720deg);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(-100vw * var(--animation-speed)));
+    opacity: 0;
   }
 }
 
