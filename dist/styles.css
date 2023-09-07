@@ -538,8 +538,36 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.-bottom-\[6px\] {
+  bottom: -6px;
+}
+
+.-left-\[150px\] {
+  left: -150px;
+}
+
+.-left-\[6px\] {
+  left: -6px;
+}
+
+.-right-\[6px\] {
+  right: -6px;
+}
+
+.-top-\[6px\] {
+  top: -6px;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .bottom-4 {
@@ -554,16 +582,20 @@ video {
   z-index: 10;
 }
 
-.z-50 {
-  z-index: 50;
+.block {
+  display: block;
 }
 
-.inline-block {
-  display: inline-block;
+.flex {
+  display: flex;
 }
 
 .grid {
   display: grid;
+}
+
+.h-\[13px\] {
+  height: 13px;
 }
 
 .h-screen {
@@ -578,16 +610,53 @@ video {
   width: 16rem;
 }
 
+.w-\[13px\] {
+  width: 13px;
+}
+
+.w-\[600px\] {
+  width: 600px;
+}
+
 .w-full {
   width: 100%;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .place-content-center {
   place-content: center;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-\[rgba\(255\2c _255\2c _255\2c _0\.1\)\] {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-\[rgba\(255\2c _255\2c _255\2c _0\.5\)\] {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .bg-blue {
@@ -605,13 +674,9 @@ video {
   background-color: rgb(255 211 113 / var(--tw-bg-opacity));
 }
 
-.text-7xl {
-  font-size: 4.5rem;
+.text-8xl {
+  font-size: 6rem;
   line-height: 1;
-}
-
-.font-black {
-  font-weight: 900;
 }
 
 .text-black {
@@ -619,8 +684,23 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  cursor: url('img/cursor/default.svg'), auto;
+}
+
+.font-bangers {
+  font-family: 'Bangers', cursive;
+}
+
+.font-cutive-mono {
+  font-family: 'Cutive Mono', monospace;
 }
 
 .animate-circle {
@@ -656,10 +736,12 @@ body {
 
 #rocket {
   position: fixed;
-  offset-path: path('M.5 122.7s24.7-275 276.9 0c327.1 356.7 266.1-330.3 548-33.3 256.9 270.7 271.1 0 271.1 0');
+  offset-path: path('M740 521C812 301 1182 -121 1384 33.9998C1523.71 141.206 1407.5 468.5 1226 435C1044.5 401.5 845.385 77.7414 652 33.9998C232 -60.9998 -82 197 -82 197');
   animation: move auto linear;
   animation-timeline: scroll(root);
-  transform: rotate(50deg);
+  transform: rotate(70deg);
+  top: 20vh;
+  translate: -10vw 0;
 }
 
 @keyframes move {
