@@ -38,10 +38,11 @@ body {
   0% {
     transform: translateY(0);
   }
-    100% {
-      transform: translateY(calc(-100vw * var(--animation-speed)));
-      opacity: 0;
-    }
+  25% {
+    translate: 0 -100vh;
+    scale: 2;
+    opacity: 0;
+  }
 }
 
 #rocket {
@@ -54,6 +55,17 @@ body {
   translate: -10vw 0;
 }
 
+/*
+#cloud-1-1, 
+#cloud-1-2 {
+  animation: leftToRight 5s infinite;
+}
+
+#cloud-2-1, 
+#cloud-2-2 {
+  animation: rightToLeft 4s infinite;
+}
+
 @keyframes move {
 	0% {
 		offset-distance: 0%;
@@ -62,3 +74,16 @@ body {
 		offset-distance: 100%;
 	}
 }
+
+@keyframes leftToRight {
+  100% {
+    translate: 0 -20px;
+  }
+}
+
+@keyframes rightToLeft {
+  100% {
+    translate: 0 20px;
+  }
+}
+*/
