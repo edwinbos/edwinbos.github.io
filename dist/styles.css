@@ -743,6 +743,16 @@ body {
   }
 }
 
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
 #rocket {
   position: fixed;
   offset-path: path('M740 521C812 301 1182 -121 1384 33.9998C1523.71 141.206 1407.5 468.5 1226 435C1044.5 401.5 845.385 77.7414 652 33.9998C232 -60.9998 -82 197 -82 197');
@@ -752,39 +762,6 @@ body {
   top: 20vh;
   translate: -10vw 0;
 }
-
-/*
-#cloud-1-1, 
-#cloud-1-2 {
-  animation: leftToRight 5s infinite;
-}
-
-#cloud-2-1, 
-#cloud-2-2 {
-  animation: rightToLeft 4s infinite;
-}
-
-@keyframes move {
-	0% {
-		offset-distance: 0%;
-	}
-	100% {
-		offset-distance: 100%;
-	}
-}
-
-@keyframes leftToRight {
-  100% {
-    translate: 0 -20px;
-  }
-}
-
-@keyframes rightToLeft {
-  100% {
-    translate: 0 20px;
-  }
-}
-*/
 
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
